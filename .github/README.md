@@ -59,6 +59,8 @@ Bu çalışmalar, kendimi geliştirmeme ne kadar yarıyorsa; bir o kadar da beni
 | 49  | ❌ [Todo List](https://github.com/rehberbey/50projects50days/tree/master/todo-list)                                       | [Live Demo](https://rehberbey.github.io/50projects50days/todo-list/views/index.html)                     |
 | 50  | ❌ [Insect Catch Game](https://github.com/rehberbey/50projects50days/tree/master/insect-catch-game)                       | [Live Demo](https://rehberbey.github.io/50projects50days/insect-catch-game/views/index.html)             |
 
+![screenshot](screenshot.png)
+
 ## Lisans
 
 [MIT](https://github.com/rehberbey/50projects50days/blob/master/LICENSE)
