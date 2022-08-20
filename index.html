@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charset="utf-8" />
+        <meta name="author" content="Furkan Rehber" />
+
+        <title>50 Projects in 50 Days - HTML/CSS and JavaScript</title>
+
+        <meta
+            name="title"
+            content="50 Projects in 50 Days - HTML/CSS and JavaScript"
+        />
+        <meta
+            name="description"
+            content="50projects50days adlı bir site keşfettim. Kendimi geliştirmem adına yaptığım projelerin linklerini bu sitede barındırıyorum. İşte benim küçük web portfolyom."
+        />
+        <style>
+            :root {
+                --gray-1: #181818;
+                --gray-2: #363636;
+                --gray-3: #f5f5f5;
+                --primary-color: #369468;
+            }
+            ::selection {
+                background: var(--primary-color);
+                color: var(--gray-1);
+            }
+            body {
+                background: var(--gray-1);
+                color: var(--gray-3);
+                margin: 2rem;
+            }
+            main.grid-template {
+                display: flex;
+                flex-flow: row wrap;
+                align-items: start;
+                gap: 1rem;
+            }
+            figure {
+                margin: 0;
+                inline-size: 400px;
+                background: var(--gray-2);
+                transition: all 0.2s ease-in-out;
+            }
+            figure:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 5px 10px var(--primary-color);
+            }
+            figure,
+            figure img {
+                border-radius: 0.25rem;
+            }
+            figure > a {
+                color: var(--gray-3);
+                text-decoration: none;
+            }
+            figure > a > figcaption {
+                padding-block: 1rem;
+                text-align: center;
+                overflow: hidden;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                padding-inline: 1em;
+            }
+            figure img {
+                inline-size: 100%;
+                aspect-ratio: 2;
+                object-fit: cover;
+                object-position: top;
+                transition: object-position 1s ease-in-out;
+            }
+            figure img:hover {
+                object-position: bottom;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="main-header">50projects50days</h1>
+
+        <main class="grid-template">
+            <!-- Yeniden eskiye -->
+            <!-- <figure>
+                <a
+                    href="https://rehberbey.github.io/Frontend-Mentor-Challenges/SSSS/dist/index.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    <img
+                        src="./SSSS"
+                        alt="SSSS"
+                    />
+                    <figcaption>SSSS</figcaption>
+                </a>
+            </figure> -->
+        </main>
+
+        <script>
+            const figcaption = document.querySelectorAll(
+                "figure > a > figcaption",
+            );
+
+            for (const el of figcaption) {
+                el.title = el.innerHTML;
+            }
+        </script>
+    </body>
+</html>
