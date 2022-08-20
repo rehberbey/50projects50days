@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap");
+body {
+  color: white;
+  font-family: "Raleway", sans-serif;
+  block-size: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  overflow: hidden;
+  max-inline-size: 1200px;
+  inline-size: 90vw;
+  block-size: 80vh;
+  aspect-ratio: 2;
+  display: flex;
+}
+main > figure {
+  overflow: hidden;
+  margin: 0.5rem;
+  border-radius: 3rem;
+  position: relative;
+  transition: flex 1s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+main > figure.active {
+  flex: 5;
+}
+main > figure:not(.active) {
+  flex: 0.5 1;
+  cursor: pointer;
+}
+main > figure:not(.active) > figcaption {
+  opacity: 0;
+}
+main > figure > .bg-img {
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: inherit;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main > figure > figcaption {
+  inline-size: -webkit-max-content;
+  inline-size: -moz-max-content;
+  inline-size: max-content;
+  position: absolute;
+  inset-block-end: 0.5rem;
+  inset-inline-start: 1.5rem;
+  font-size: 1.2rem;
+  transition: opacity 1s 0.25s;
+}/*# sourceMappingURL=index.css.map */
