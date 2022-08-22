@@ -1,0 +1,86 @@
+:root {
+  --c-border: #3498db;
+  --c-empty-border: #e0e0e0;
+  --c-circle-bg: white;
+  --c-circle-text: #999;
+  --progress-line-size: 0;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+main {
+  inline-size: 350px;
+  overflow: hidden;
+}
+main > .progress-container {
+  max-inline-size: 100%;
+  block-size: 2rem;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+main > .progress-container::before {
+  content: "";
+  inline-size: 100%;
+  block-size: 0.2rem;
+  position: absolute;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  background-color: var(--c-empty-border);
+}
+main > .progress-container::after {
+  content: "";
+  inline-size: var(--progress-line-size);
+  block-size: 0.2rem;
+  position: absolute;
+  inset-block-start: 50%;
+  transform: translateY(-50%);
+  z-index: -1;
+  background-color: var(--c-border);
+  transition: inline-size 0.4s ease-in-out;
+}
+main > .progress-container > .circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--c-circle-bg);
+  color: var(--c-circle-text);
+  aspect-ratio: 1;
+  border: 3px solid var(--c-empty-border);
+  border-radius: 50%;
+  transition: transform 1.2s, border-color 1.2s;
+}
+main > .progress-container > .circle.active {
+  transform: rotate(2turn);
+  border-color: var(--c-border);
+}
+main > menu {
+  padding: 0;
+  margin-inline: auto;
+  inline-size: -webkit-max-content;
+  inline-size: -moz-max-content;
+  inline-size: max-content;
+}
+main > menu > button {
+  cursor: pointer;
+  padding: 0.5em 1.5em;
+  margin: 0.5em;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--c-border);
+  color: var(--c-empty-border);
+  transition: opacity 0.2s, background-color 0.2s, color 0.2s, transform 0.1s;
+}
+main > menu > button:disabled {
+  cursor: not-allowed;
+  opacity: 0.25;
+}
+main > menu > button:active {
+  transform: scale(0.98);
+}/*# sourceMappingURL=index.css.map */
