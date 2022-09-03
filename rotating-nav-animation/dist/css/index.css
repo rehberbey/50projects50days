@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Signika:wght@700&display=swap");
+:root {
+  --c-accent: #ff7979;
+  --c-bg: #eee;
+  --c-dark-bg: #121212;
+  --c-text: var(--c-dark-bg);
+  --c-dark-text: var(--c-bg);
+  --w-aside-nav: 15rem;
+  accent-color: var(--c-accent);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Signika", sans-serif;
+}
+
+main, body, body > nav ul > li, body > .circle {
+  transition: transform 0.8s, background-color 0.6s, color 0.4s;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: var(--c-dark-bg);
+  color: var(--c-dark-text);
+  overflow-x: hidden;
+  position: relative;
+}
+body > .circle {
+  position: absolute;
+  transform: translate(-50%, -50%) rotate(0.1turn);
+  background-color: var(--c-accent);
+  inline-size: 12.5rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+body > .circle > button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  transform-origin: top left;
+}
+body > .circle > button#open {
+  transform: translate(40%, 30%) rotate(-0.1turn);
+}
+body > .circle > button#close {
+  transform: translate(-80%, 150%) rotate(-0.1turn);
+}
+body > .circle,
+body > nav {
+  z-index: 100;
+}
+body > nav {
+  position: fixed;
+  inset-inline-start: 0;
+  inset-block-end: 10%;
+  font-size: 1.25em;
+  white-space: nowrap;
+}
+body > nav ul > li {
+  transform: translateX(-200%);
+  -webkit-margin-after: 2em;
+          margin-block-end: 2em;
+  cursor: pointer;
+}
+body > nav ul > li:hover > a {
+  color: var(--c-accent);
+}
+body > nav ul > li > a {
+  text-decoration: none;
+  color: inherit;
+}
+body.aside-open > .circle {
+  transform: translate(-50%, -50%) rotate(-0.15turn);
+}
+body.aside-open > nav ul > li {
+  transform: translateX(0);
+}
+body.aside-open > nav ul > li:nth-child(2) {
+  transform: translateX(25%);
+}
+body.aside-open > nav ul > li:nth-child(3) {
+  transform: translateX(50%);
+}
+body.aside-open > main {
+  transform: rotate(-20deg);
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: var(--c-bg);
+    color: var(--c-text);
+  }
+  body > main {
+    background-color: var(--c-dark-bg);
+    color: var(--c-dark-text);
+  }
+}
+
+main {
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  padding: 3.25rem 12.5rem;
+  max-inline-size: 100vw;
+  min-block-size: 100vh;
+  transform-origin: top left;
+}
+main > article.content > h1 {
+  -webkit-margin-after: -0.2em;
+          margin-block-end: -0.2em;
+}
+main > article.content > h1 + small {
+  font-style: oblique;
+}
+main > article.content > img {
+  max-inline-size: 100%;
+}/*# sourceMappingURL=index.css.map */
