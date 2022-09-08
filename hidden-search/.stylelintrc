@@ -1,0 +1,13 @@
+{
+    "extends": [
+        "stylelint-config-rehberbey",
+        "stylelint-config-html",
+        "stylelint-config-prettier"
+    ],
+    "plugins": ["stylelint-scss"],
+    "reportDescriptionlessDisables": true,
+    "reportInvalidScopeDisables": true,
+    "reportNeedlessDisables": true,
+    "defaultSeverity": "warning",
+    "customSyntax": "postcss-scss"
+}

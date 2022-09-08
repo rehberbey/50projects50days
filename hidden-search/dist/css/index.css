@@ -1,0 +1,59 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  block-size: 100vh;
+  font-size: 1.2rem;
+  font-family: Roboto, sans-serif;
+  background-color: hsl(251deg, 100%, 66%);
+  background-image: linear-gradient(90deg, hsl(251deg, 100%, 66%) 0%, hsl(251deg, 94%, 66%) 1%, hsl(251deg, 88%, 66%) 5%, hsl(251deg, 81%, 65%) 12%, hsl(251deg, 75%, 65%) 24%, hsl(251deg, 69%, 64%) 42%, hsl(251deg, 64%, 64%) 65%, hsl(251deg, 58%, 63%) 85%, hsl(251deg, 52%, 63%) 96%, hsl(251deg, 47%, 62%) 100%);
+}
+
+.search {
+  position: relative;
+  block-size: 8vh;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: inset -8px 8px 25px 0 hsl(251deg, 95%, 26%);
+}
+.search > * {
+  max-inline-size: 100%;
+  block-size: 100%;
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(251deg, 95%, 26%);
+  border: none;
+  border-radius: 0.5rem;
+}
+.search > input {
+  transition: translate 0.8s;
+  translate: 150% 0;
+  padding: 0.5em;
+}
+.search > input::-moz-placeholder {
+  font-style: oblique;
+}
+.search > input:-ms-input-placeholder {
+  font-style: oblique;
+}
+.search > input::placeholder {
+  font-style: oblique;
+}
+.search > input:focus-visible {
+  outline: none;
+}
+.search > button {
+  transition: inset 0.8s 0.8s, translate 0.8s 0.8s;
+  position: absolute;
+  inset-inline-end: 50%;
+  translate: 50% 0;
+  aspect-ratio: 1;
+  cursor: pointer;
+}
+.search:focus-within > input {
+  translate: 0;
+}
+.search:focus-within > button {
+  inset-inline-end: 0;
+  translate: 0;
+}/*# sourceMappingURL=index.css.map */
