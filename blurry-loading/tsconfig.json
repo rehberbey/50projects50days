@@ -1,0 +1,42 @@
+{
+    "compilerOptions": {
+        "module": "ESNext",
+        "target": "ES2022",
+        "moduleResolution": "NodeNext",
+        "resolveJsonModule": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitOverride": true,
+        "noImplicitReturns": true,
+        "noPropertyAccessFromIndexSignature": true,
+        "noUncheckedIndexedAccess": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "strict": true,
+        "declaration": true,
+        "declarationMap": true,
+        "declarationDir": "src/public/types",
+        "outDir": "dist/js",
+        "sourceMap": true,
+        "downlevelIteration": true,
+        "preserveValueImports": true,
+        "importsNotUsedAsValues": "error",
+        "removeComments": true,
+        "forceConsistentCasingInFileNames": true,
+        "listEmittedFiles": true, // Derlenen dosyaların isimlerini listeler (debug)
+        "listFiles": true, // Derlemenin parçası olan dosyaları listeler (debug)
+        "traceResolution": true, // Bir modülün neden dahil edilmediğini bildirir (debug)
+        "incremental": true,
+        "tsBuildInfoFile": ".tsbuildinfo",
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "allowJs": true,
+        "checkJs": false,
+        "useDefineForClassFields": true,
+        "baseUrl": "src/public/js",
+        "exactOptionalPropertyTypes": true,
+        "isolatedModules": true,
+        "importHelpers": true
+    },
+    "include": ["src/public/js"],
+    "exclude": ["node_modules", "dist/js"]
+}
