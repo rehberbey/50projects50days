@@ -1,0 +1,28 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    background-color: hsl(55 44% 89%);
+    color: hsl(0 0% 0%);
+    overflow-x: hidden;
+}
+
+.box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    inline-size: min(30%, 500px);
+    aspect-ratio: 2;
+    border-radius: 1rem;
+    background-color: hsl(212 66% 59%);
+    color: hsl(0 0% 100%);
+    translate: 100vw 0;
+    transition: translate 0.5s;
+    &:nth-child(even) {
+        translate: -100vw 0;
+    }
+    &.show {
+        translate: 0;
+    }
+}
