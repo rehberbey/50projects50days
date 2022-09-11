@@ -34,7 +34,7 @@ section.split > a:hover {
   border-color: transparent;
 }
 section.split.left {
-  background-image: url("/src/public/image/ps.jpg");
+  background-image: url("../../src/public/image/ps.jpg");
 }
 section.split.left > a:hover {
   background-color: #5855ec;
@@ -46,7 +46,7 @@ section.split.left::before {
   background-color: hsla(241deg, 80%, 63%, 0.8);
 }
 section.split.right {
-  background-image: url("/src/public/image/xbox.jpg");
+  background-image: url("../../src/public/image/xbox.jpg");
 }
 section.split.right > a:hover {
   background-color: hsl(120deg, 63%, 29%);

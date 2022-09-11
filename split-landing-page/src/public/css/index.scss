@@ -55,7 +55,7 @@ section.split {
     }
 
     &.left {
-        background-image: url("/src/public/image/ps.jpg");
+        background-image: url("../../src/public/image/ps.jpg");
 
         > a:hover {
             background-color: $c-hover-left-btn;
@@ -64,7 +64,7 @@ section.split {
         @include overlay-bg($c-bg-left);
     }
     &.right {
-        background-image: url("/src/public/image/xbox.jpg");
+        background-image: url("../../src/public/image/xbox.jpg");
 
         > a:hover {
             background-color: $c-hover-right-btn;
