@@ -1,0 +1,65 @@
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap";
+body {
+  font-family: "Open Sans", sans-serif;
+  block-size: 100vh;
+  overflow: hidden;
+}
+
+section.split {
+  background: hsl(0deg, 0%, 0%) center left/cover no-repeat;
+  inline-size: 50%;
+  block-size: 100%;
+  float: left;
+  text-align: center;
+  position: relative;
+  transition: inline-size 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+}
+section.split > * {
+  position: relative;
+  white-space: nowrap;
+}
+section.split > h1 {
+  font-size: 4rem;
+  margin-block: 3em 0.5em;
+}
+section.split > a {
+  font-weight: 700;
+  color: inherit;
+  border: 3px solid currentColor;
+  padding: 1.4em 4.5em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+section.split > a:hover {
+  border-color: transparent;
+}
+section.split.left {
+  background-image: url("/src/public/image/ps.jpg");
+}
+section.split.left > a:hover {
+  background-color: #5855ec;
+}
+section.split.left::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsla(241deg, 80%, 63%, 0.8);
+}
+section.split.right {
+  background-image: url("/src/public/image/xbox.jpg");
+}
+section.split.right > a:hover {
+  background-color: hsl(120deg, 63%, 29%);
+}
+section.split.right::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: hsla(0deg, 0%, 17%, 0.8);
+}
+section.split:hover {
+  inline-size: 75%;
+}
+section.split.shrink {
+  inline-size: 25%;
+}/*# sourceMappingURL=index.css.map */

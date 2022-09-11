@@ -1,0 +1,83 @@
+@use "sass:color";
+
+@import "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap";
+
+$c-bg-left: hsl(241 80% 63% / 0.8);
+$c-bg-right: hsl(0 0% 17% / 0.8);
+$c-hover-left-btn: color.change($c-bg-left, $alpha: 1);
+$c-hover-right-btn: hsl(120 63% 29%);
+
+body {
+    font-family: "Open Sans", sans-serif;
+    block-size: 100vh;
+    overflow: hidden;
+}
+
+section.split {
+    $parent: &;
+    background: hsl(0 0% 0%) center left / cover no-repeat;
+    inline-size: 50%;
+    block-size: 100%;
+    float: left;
+    text-align: center;
+    position: relative;
+    transition: inline-size 1s cubic-bezier(0.46, 0.03, 0.52, 0.96);
+
+    > {
+        * {
+            position: relative;
+            white-space: nowrap;
+        }
+        h1 {
+            font-size: 4rem;
+            margin-block: 3em 0.5em;
+        }
+        a {
+            font-weight: 700;
+            color: inherit;
+            border: 3px solid currentColor;
+            padding: 1.4em 4.5em;
+            text-transform: uppercase;
+            text-decoration: none;
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
+
+    @mixin overlay-bg($bg-color: hsl(0, 0%, 15%, 0.5)) {
+        &::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background-color: $bg-color;
+        }
+    }
+
+    &.left {
+        background-image: url("/src/public/image/ps.jpg");
+
+        > a:hover {
+            background-color: $c-hover-left-btn;
+        }
+
+        @include overlay-bg($c-bg-left);
+    }
+    &.right {
+        background-image: url("/src/public/image/xbox.jpg");
+
+        > a:hover {
+            background-color: $c-hover-right-btn;
+        }
+
+        @include overlay-bg($c-bg-right);
+    }
+
+    &:hover {
+        inline-size: 75%;
+    }
+
+    &.shrink {
+        inline-size: 25%;
+    }
+}
