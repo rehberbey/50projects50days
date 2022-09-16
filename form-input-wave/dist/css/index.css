@@ -1,0 +1,89 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+:root {
+  --c-bg-main: hsl(270deg, 100%, 91%);
+  --c-bg: hsl(270deg, 42%, 12%);
+  --c-text: hsl(270deg, 100%, 91%);
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg-main: hsl(270deg, 42%, 12%);
+    --c-bg: hsl(270deg, 100%, 91%);
+    --c-text: hsl(270deg, 52%, 22%);
+  }
+}
+
+a {
+  color: inherit;
+}
+
+body {
+  background-color: var(--c-bg-main);
+  min-block-size: 100vh;
+  font-family: Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-form {
+  min-inline-size: 22.5rem;
+  background-color: var(--c-bg);
+  color: var(--c-text);
+  border-radius: 0.4rem;
+  padding: 2rem 3rem;
+}
+#login-form h1 {
+  text-align: center;
+}
+#login-form > form > * {
+  margin-block: 1rem;
+}
+#login-form > form > .form-control {
+  position: relative;
+  margin-block: 2.5em;
+}
+#login-form > form > .form-control label {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 1rem;
+}
+#login-form > form > .form-control label > span {
+  display: inline-block;
+  transition: translate 0.3s cubic-bezier(0.48, -0.72, 0.81, 1.7);
+}
+#login-form > form > .form-control input {
+  inline-size: 100%;
+  padding-block: 1rem;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  -webkit-border-after: 2px solid var(--c-text);
+          border-block-end: 2px solid var(--c-text);
+}
+#login-form > form > .form-control input:valid + label span, #login-form > form > .form-control input:focus + label span {
+  translate: 0 -2rem;
+}
+#login-form > form > .form-control input:focus-visible {
+  outline: none;
+}
+#login-form > form > .form-control input:focus-visible + label span {
+  translate: 0 -2rem;
+}
+#login-form > form > button {
+  cursor: pointer;
+  inline-size: 100%;
+  padding-block: 1rem;
+  background-color: var(--c-text);
+  color: var(--c-bg);
+  border: none;
+  border-radius: 0.4rem;
+  transition: opacity 0.2s;
+}
+#login-form > form > button:hover {
+  opacity: 0.9;
+}/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Form Wave</title>
+        <meta name="author" content="https://www.linkedin.com/in/rehberbey/" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+        <link rel="stylesheet" href="../src/public/css/normalize.css" />
+        <link rel="stylesheet" href="../src/public/css/main.css" />
+        <link rel="stylesheet" href="../dist/css/index.css" />
+
+        <link
+            rel="icon"
+            type="image/png"
+            sizes="32x32"
+            href="../src/public/image/favicon-32x32.png"
+        />
+    </head>
+    <body>
+        <noscript
+            ><iframe
+                style="inline-size: 100%; border: none"
+                src="noscript.html"
+            ></iframe
+        ></noscript>
+
+        <div id="login-form">
+            <h1>Please Login</h1>
+
+            <form>
+                <div class="form-control">
+                    <input
+                        type="text"
+                        name="email"
+                        id="email"
+                        autocomplete="off"
+                        required
+                    />
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="form-control">
+                    <input
+                        type="password"
+                        name="password"
+                        id="password"
+                        autocomplete="off"
+                        required
+                    />
+                    <label for="password">Password</label>
+                </div>
+
+                <button type="submit" onclick="return false">Login</button>
+            </form>
+
+            <p>Don't have an account? <a href="#">Register</a></p>
+        </div>
+
+        <script src="../src/public/js/modernizr-3.6.0.min.js"></script>
+        <script type="module" src="../dist/js/index.js"></script>
+    </body>
+</html>

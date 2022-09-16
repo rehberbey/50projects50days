@@ -1,0 +1,107 @@
+@import "https://fonts.googleapis.com/css2?family=Roboto&display=swap";
+
+$c-bg-main: hsl(270 100% 91%);
+$c-bg: hsl(270 42% 12%);
+$c-text: $c-bg-main;
+
+$c-dark-bg-main: $c-bg;
+$c-dark-bg: $c-bg-main;
+$c-dark-text: hsl(270 52% 22%);
+
+$p-input: 1rem;
+$radius: 0.4rem;
+
+:root {
+    --c-bg-main: #{$c-bg-main};
+    --c-bg: #{$c-bg};
+    --c-text: #{$c-text};
+
+    @media (prefers-color-scheme: dark) {
+        --c-bg-main: #{$c-dark-bg-main};
+        --c-bg: #{$c-dark-bg};
+        --c-text: #{$c-dark-text};
+    }
+}
+
+a {
+    color: inherit;
+}
+
+body {
+    background-color: var(--c-bg-main);
+    min-block-size: 100vh;
+    font-family: Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    min-inline-size: 22.5rem;
+    background-color: var(--c-bg);
+    color: var(--c-text);
+    border-radius: $radius;
+    padding: 2rem 3rem;
+    h1 {
+        text-align: center;
+    }
+
+    > {
+        form > {
+            * {
+                margin-block: 1rem;
+            }
+            .form-control {
+                position: relative;
+                margin-block: 2.5em;
+                label {
+                    user-select: none;
+                    pointer-events: none;
+                    position: absolute;
+                    inset: {
+                        inline-start: 0;
+                        block-start: $p-input;
+                    }
+                    > span {
+                        display: inline-block;
+                        transition: translate 0.3s
+                            cubic-bezier(0.48, -0.72, 0.81, 1.7);
+                    }
+                }
+                input {
+                    inline-size: 100%;
+                    padding-block: $p-input;
+                    background-color: transparent;
+                    color: inherit;
+                    border: none;
+                    border-block-end: 2px solid var(--c-text);
+                    &:valid,
+                    &:focus {
+                        + label span {
+                            translate: 0 ($p-input * -2);
+                        }
+                    }
+                    &:focus-visible {
+                        outline: none;
+                        + label span {
+                            translate: 0 ($p-input * -2);
+                        }
+                    }
+                }
+            }
+            button {
+                cursor: pointer;
+                inline-size: 100%;
+                padding-block: 1rem;
+                background-color: var(--c-text);
+                color: var(--c-bg);
+                border: none;
+                border-radius: 0.4rem;
+                transition: opacity 0.2s;
+                &:hover {
+                    opacity: 0.9;
+                }
+            }
+        }
+    }
+}
