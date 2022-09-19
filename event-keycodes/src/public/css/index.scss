@@ -1,0 +1,46 @@
+@import "https://fonts.googleapis.com/css2?family=Signika&display=swap";
+
+$c-bg: hsl(0 0% 88%);
+$c-bg-key: hsl(0 0% 93%);
+$c-border-key: hsl(0 0% 60%);
+$c-text: hsl(0 0% 14%);
+
+body {
+    background-color: $c-bg;
+    color: $c-text;
+    min-block-size: 100vh;
+    font-family: Signika, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    font-size: 1.3em;
+    text-align: center;
+    > .key {
+        display: inline-block;
+        min-inline-size: 8em;
+        background-color: $c-bg-key;
+        border: 1px solid $c-border-key;
+        padding: 1em;
+        margin: 1em;
+        font: {
+            size: larger;
+            weight: bolder;
+        }
+        position: relative;
+        > small {
+            font: {
+                size: medium;
+                weight: lighter;
+            }
+            position: absolute;
+            inset: {
+                inline-start: 50%;
+                block-start: -50%;
+            }
+            translate: -50% 0;
+        }
+    }
+}
