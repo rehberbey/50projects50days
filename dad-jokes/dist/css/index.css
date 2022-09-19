@@ -1,0 +1,55 @@
+@import "https://fonts.googleapis.com/css2?family=Signika:wght@400;600&display=swap";
+body {
+  min-block-size: 100vh;
+  background: hsl(22deg, 90%, 57%) linear-gradient(90deg, hsl(39deg, 100%, 77%) 0%, hsl(22deg, 90%, 57%) 100%);
+  font-family: Signika, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 1.3;
+  letter-spacing: 0.033em;
+  word-spacing: 0.08em;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 20px 20px rgba(214, 127, 76, 0.5);
+  border: 0.5em dashed rgba(214, 127, 76, 0.5);
+  background-color: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 0%);
+  inline-size: 70%;
+  padding: 3rem 5rem;
+}
+main > :first-child {
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+main > :last-child {
+  -webkit-margin-after: 0;
+          margin-block-end: 0;
+}
+main > h2 {
+  color: hsl(22deg, 90%, 57%);
+}
+main > #jokeParagraph {
+  max-block-size: 25vh;
+  overflow: auto;
+}
+main > button#getJoke {
+  cursor: pointer;
+  background: hsl(22deg, 90%, 57%) linear-gradient(90deg, hsl(39deg, 100%, 77%) 0%, hsl(22deg, 90%, 57%) 100%);
+  box-shadow: inset -4px -4px 12px 4px rgba(214, 127, 76, 0.5);
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1em 1.5em;
+  transition: opacity 0.2s, scale 0.2s, translate 0.2s;
+}
+main > button#getJoke:hover {
+  opacity: 0.9;
+  scale: 1.02;
+}
+main > button#getJoke:active {
+  translate: 0 0.1em;
+}/*# sourceMappingURL=index.css.map */
